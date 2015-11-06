@@ -13,6 +13,8 @@ sub-generator will create modules for you with a smaller version of the
 horizontal structure. Each module is self-contained, although there may be a
 base that is `common` to everything else.
 
+This repo is copied from [React/Flux Vertical generator](https://github.com/jermspeaks/generator-react-vertical), which I'm de-comissioning in favor of this one.
+
 ## Installation
 
 ### Yeoman
@@ -34,61 +36,12 @@ npm install -g generator-react-redux-modules
 Creates the base project. Loosely based off [React-starter-kit](https://github.com/kriasoft/react-starter-kit).
 
 ```bash
-yo react-vertical
-
-# Builds
-.
-├── .babelrc
-├── .csscomb.json
-├── .csslintrc
-├── .editorconfig
-├── .eslintrc
-├── .flowconfig
-├── .jscsrc
-├── .jshintrc
-├── .scss-lint.yml
-├── .travis.yml
-├── .yo-rc.json
-├── README.md
-├── license.txt
-├── package.json
-├── preprocessor.js
-├── src
-│   ├── app.js
-│   ├── common
-│   │   ├── Dispatcher.js
-│   │   ├── HttpClient.js
-│   │   └── Location.js
-│   ├── config.js
-│   ├── public
-│   │   ├── apple-touch-icon.png
-│   │   ├── browserconfig.xml
-│   │   ├── crossdomain.xml
-│   │   ├── favicon.ico
-│   │   ├── humans.txt
-│   │   ├── robots.txt
-│   │   ├── tile-wide.png
-│   │   └── tile.png
-│   ├── routes.js
-│   ├── server
-│   │   ├── package.json
-│   │   └── server.js
-│   └── utils
-│       ├── DOMUtils.js
-│       └── fs.js
-└── tools
-    ├── build.js
-    ├── bundle.js
-    ├── clean.js
-    ├── config.js
-    ├── copy.js
-    ├── serve.js
-    └── start.js
+yo react-redux-modules
 ```
 
-Besides project base files, includes Source, Tests, and Tools folders.
+This will compile base files, including the Source, and Tools folders. (tests pending)
 
-`In Progress`: Tests
+<!-- `In Progress`: Tests -->
 
 ### Options
 
@@ -98,9 +51,9 @@ Besides project base files, includes Source, Tests, and Tools folders.
 | `--skip-cache`     | Do not remember prompt answers             | Default: false |
 | `--skip-install`   | Do not automatically install dependencies  | Default: false |
 
-## Sub-generators
+<!-- ## Sub-generators
 
-The sub generators assumes you already ahve a project up and running. They are to
+The sub generators assumes you already have a project up and running. They are to
 help you through developing new modules, components, etc.
 
 ### Module
@@ -199,7 +152,7 @@ yo react-vertical:common TextBox
                  ├── TextBox.js
                  ├── TextBox.scss
                  └── package.json
-```
+``` -->
 
 ## Contributing
 
