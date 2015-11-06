@@ -43,6 +43,7 @@ module.exports = generators.Base.extend({
 
     // Tools Directory
     this.template('tools/*.js', toolDir);
+    this.template('tools/*/*.js', toolDir);
 
     // Tests Directory
     // this.template('tests/*.js', appDir);
