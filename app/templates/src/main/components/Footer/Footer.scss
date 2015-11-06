@@ -1,0 +1,41 @@
+.Footer {
+  position: absolute;
+  bottom: 0;
+  min-width: 100vw;
+  background: #333;
+}
+
+.Footer-container {
+  padding: 20px 15px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.Footer-text {
+  color: rgba(255, 255, 255, .5);
+}
+
+.Footer-text--muted {
+  color: rgba(255, 255, 255, .3);
+}
+
+.Footer-spacer {
+  color: rgba(255, 255, 255, .3);
+}
+
+.Footer-text,
+.Footer-link {
+  padding: 2px 5px;
+  font-size: 1em;
+}
+
+.Footer-link,
+.Footer-link:active,
+.Footer-link:visited {
+  color: rgba(255, 255, 255, .6);
+  text-decoration: none;
+}
+
+.Footer-link:hover {
+  color: rgba(255, 255, 255, 1);
+}

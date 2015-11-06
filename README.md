@@ -1,19 +1,17 @@
 # React & Redux Generator
 
-[![Dependency Status](https://gemnasium.com/jermspeaks/generator-react-vertical.svg)](https://gemnasium.com/jermspeaks/generator-react-vertical)
-[![License](http://img.shields.io/:license-mit-blue.svg)](https://github.com/jermspeaks/generator-react-vertical/blob/master/LICENSE)
+[![License](http://img.shields.io/:license-mit-blue.svg)](https://github.com/jermspeaks/generator-react-redux/blob/master/LICENSE)
 
-A Yeoman generator for React & Flux for projects vertically integrated.
+A Yeoman generator for React & Redux for projects vertically integrated.
 
-Most React and Flux templates have a horizontal structure for their projects.
+Of those out there, the React and Redux templates have a horizontal structure for their projects.
 This means all of your elements belong in the same folder, i.e. your components
 go in a `components` folder.
 
-This generator works for vertically integrated React and Flux projects. The
+This generator works for vertically integrated React and Redux projects. The
 sub-generator will create modules for you with a smaller version of the
 horizontal structure. Each module is self-contained, although there may be a
-base that is `common` to everything else. For example, all modules share the
-same `Dispatcher`, or every store shares the same common `BaseStore`.
+base that is `common` to everything else.
 
 ## Installation
 
@@ -25,10 +23,10 @@ For this generator to work, [Yeoman](https://github.com/yeoman/yo) must be globa
 npm install -g yo
 ```
 
-Then you can install this `generator-react-vertical` module.
+Then you can install this `generator-react-redux-modules` module. I do not maintain [generator-react-redux](https://github.com/mohebifar/generator-react-redux).
 
 ```bash
-npm install -g generator-react-vertical
+npm install -g generator-react-redux-modules
 ```
 
 ## Base Generator

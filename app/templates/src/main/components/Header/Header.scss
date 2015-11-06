@@ -1,0 +1,46 @@
+@import '../../../common/styles/variables.scss';
+
+:root {
+  --brand-color: $primary-black;
+}
+
+.Header {
+  min-width: 100vw;
+  height: 60px;
+  color: $primary-black;
+  background: #fff;
+}
+
+.Header-brand {
+  float: left;
+  margin: 11px 40px;
+  font-size: 1.75em; /* ~28px */
+  // color: $brand-color;
+  text-decoration: none;
+}
+
+
+
+.Header-nav {
+  float: right;
+  margin: 15px 40px;
+}
+
+.Header-banner {
+  text-align: center;
+}
+
+.Header-bannerTitle {
+  padding: 10px;
+  margin: 0;
+  font-size: 4em;
+  font-weight: normal;
+  line-height: 1em;
+}
+
+.Header-bannerDesc {
+  padding: 0;
+  margin: 0;
+  font-size: 1.25em;
+  color: rgba(255, 255, 255, .5);
+}

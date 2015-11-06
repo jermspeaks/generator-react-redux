@@ -1,0 +1,36 @@
+@import "../../../common/styles/variables";
+
+.Navigation-link,
+.Navigation-user {
+  display: inline-block;
+  padding: 3px 8px;
+  font-size: 1.125em; // ~18px
+  text-decoration: none;
+}
+
+.Navigation-link,
+.Navigation-link:active,
+.Navigation-link:visited {
+  color: $primary-black;
+  cursor: pointer;
+}
+
+.Navigation-link:hover {
+  color: $primary-black-light;
+}
+
+.Navigation-link--highlight {
+  margin-right: 8px;
+  margin-left: 8px;
+  color: $primary-white;
+  background: transparentize($primary-black, 0.15);
+  border-radius: 3px;
+}
+
+.Navigation-link--highlight:hover {
+  background: transparentize($primary-black, 0.3);
+}
+
+.Navigation-spacer {
+  color: transparentize($primary-white, 0.3);
+}
