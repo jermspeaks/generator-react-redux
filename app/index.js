@@ -39,7 +39,7 @@ module.exports = generators.Base.extend({
 
     // Source Directory
     this.template('src/*.js', appDir);
-    this.template('src/*/*.*', appDir);
+    this.template('src/**/*.*', appDir);
 
     // Tools Directory
     this.template('tools/*.js', toolDir);
