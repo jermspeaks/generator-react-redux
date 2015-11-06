@@ -91,7 +91,7 @@ module.exports = generators.Base.extend({
   },
 
   initializing: function() {
-    var message = chalk.bgBlack.bold('\nWelcome to React-Vertical Project\n') + chalk.underline('JS React/Flux Compiler\n');
+    var message = chalk.bgBlack.bold('\nWelcome to React-Redux Project\n') + chalk.underline('JS React/Redux Compiler\n');
     this.log(yosay(message));
 
     this.log(chalk.bold('\nMain Generator is a WIP. For now, please user the subgenerator\n'));
