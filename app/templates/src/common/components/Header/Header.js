@@ -7,17 +7,10 @@ class Header extends Component {
 
   static propTypes = {
     username: PropTypes.string,
-    logoutUser: PropTypes.func.isRequired,
   };
 
   constructor(props) {
     super(props);
-    this._logout = this._logout.bind(this);
-  }
-
-  _logout(event) {
-    event.preventDefault();
-    this.props.logoutUser();
   }
 
   render() {
@@ -25,18 +18,12 @@ class Header extends Component {
       <div className="Header">
         <div className="Header-brand">
           <Link to="/">
-            <span className="Header-brandTxt" id="header-brand-text">INFORM&#8482;</span>
+            <span className="Header-brandTxt" id="header-brand-text">Logo</span>
           </Link>
         </div>
         <div className='Navigation' role='navigation'>
           <Link className='Navigation-link' to='/about' >About</Link>
           <span className='Navigation-spacer'> | </span>
-          <div className='Navigation-user'>
-            <span>Welcome, </span>
-            <span className='Navigation-user--username'>{this.props.username}</span>
-            <span className='Navigation-spacer'> | </span>
-            <a className='Navigation-link Navigation-user--logout' onClick={this._logout}>Logout</a>
-          </div>
         </div>
         <div className="clear-float"></div>
       </div>

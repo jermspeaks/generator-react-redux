@@ -1,5 +1,5 @@
 import React, { PropTypes, Component } from 'react';
-import styles from './Dashboard.scss';
+import styles from './LandingPage.scss';
 import withStyles from '../../common/decorators/withStyles';
 
 class LandingPage extends Component {
@@ -9,7 +9,7 @@ class LandingPage extends Component {
   };
 
   render() {
-    let title = 'Welcome to the Digital Media Exchange';
+    let title = 'React Redux Boilerplate';
     this.context.onSetTitle(title);
 
     return (
