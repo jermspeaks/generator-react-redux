@@ -1,0 +1,34 @@
+{
+  "name": "generator-react-redux",
+  "version": "0.1.0",
+  "description": "React with Redux code generator using Yeoman",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jermspeaks/generator-react-redux.git"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "yeoman",
+    "code",
+    "generator"
+  ],
+  "author": "Jeremy Wong (jermspeaks@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jermspeaks/generator-react-redux/issues"
+  },
+  "homepage": "https://github.com/jermspeaks/generator-react-redux#readme",
+  "dependencies": {
+    "chalk": "^1.1.1",
+    "gulp-git": "^1.6.0",
+    "mkdirp": "^0.5.1",
+    "string": "^3.3.1",
+    "yeoman-generator": "^0.21.1",
+    "yosay": "^1.0.5"
+  }
+}
