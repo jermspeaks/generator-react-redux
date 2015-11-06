@@ -1,5 +1,3 @@
-/*! React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
-
 import React, { Component } from 'react'; // eslint-disable-line no-unused-vars
 import EventEmitter from 'eventemitter3';
 import { canUseDOM } from 'fbjs/lib/ExecutionEnvironment';
@@ -49,7 +47,7 @@ function withViewport(ComposedComponent) {
     }
 
     handleResize(value) {
-      this.setState({viewport: value});
+      this.setState({viewport: value}); // eslint-disable-line react/no-set-state
     }
 
   };

@@ -53,7 +53,7 @@ module.exports = generators.Base.extend({
     var prompts = [{
       name: 'name',
       message: 'What is the name of your project?',
-      default: 'react-flux-starter',
+      default: 'react-redux-starter',
     }, {
       name: 'description',
       message: 'What is the description of your project?',
@@ -91,11 +91,8 @@ module.exports = generators.Base.extend({
   },
 
   initializing: function() {
-    var message = chalk.bgBlack.bold('\nWelcome to React-Redux Project\n') + chalk.underline('JS React/Redux Compiler\n');
+    var message = chalk.bgBlack.bold('\nWelcome to React-Redux Project\n') + chalk.underline('Javascript React Redux Compiler\n');
     this.log(yosay(message));
-
-    this.log(chalk.bold('\nMain Generator is a WIP. For now, please user the subgenerator\n'));
-    this.log('\nyo react-vertical:module #{moduleName}\n');
   },
 
   prompting: function() {

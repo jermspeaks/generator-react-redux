@@ -1,22 +1,19 @@
 import React from 'react';
-import {Router, Route, DefaultRoute, IndexRoute} from 'react-router';
-import App from './main/components/App';
-import ContactPage from './main/components/ContactPage';
-import LandingPage from './main/components/LandingPage';
-import LoginPage from './auth/components/LoginPage';
-import AboutPage from './main/components/AboutPage';
-import NotFoundPage from './main/components/NotFoundPage';
+import {Route, DefaultRoute, IndexRoute} from 'react-router';
+import App from './containers/App';
+import Dashboard from './containers/Dashboard';
+import AboutPage from './containers/AboutPage';
+import NotFoundPage from './containers/NotFoundPage';
+import LoginPage from './auth/container/LoginPage';
+import ResetPassword from './auth/container/ResetPassword';
 
-export default function getRoutes(history){
-  return (
-    <Router history={history}>
-      <Route path='/' component={App}>
-        <IndexRoute component={LandingPage} />
-        <Route path='contact' component={ContactPage} />
-        <Route path='login' component={LoginPage} />
-        <Route path='about' component={AboutPage} />
-        <Route path='*' component={NotFoundPage}/> /* Error Handling */
-      </Route>
-    </Router>
-  );
-}
+export default (
+  <Route path='/' component={App}>
+    <IndexRoute name='dashboard' component={Dashboard} />
+    <Route name='about' path='about' component={AboutPage} />
+    <Route name='login' path='login' component={LoginPage} />
+    <Route name='reset_password' path='reset_password/:token' component={ResetPassword} />
+    { /* Error Handling - Must Be Last */ }
+    <Route path='*' component={NotFoundPage}/>
+  </Route>
+);

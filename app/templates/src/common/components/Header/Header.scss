@@ -1,0 +1,83 @@
+@import "../../../common/styles/variables";
+
+:root {
+  --brand-color: $primary-black;
+}
+
+.Header {
+  min-width: 100vw;
+  height: 60px;
+  color: $primary-black;
+  background: #fff;
+}
+
+.Header-brand {
+  float: left;
+  margin: 11px 40px;
+  font-size: 1.75em; // -28px
+  // color: $brand-color;
+  text-decoration: none;
+}
+
+.Header-nav {
+  float: right;
+  margin: 15px 40px;
+}
+
+.Header-banner {
+  text-align: center;
+}
+
+.Header-bannerTitle {
+  padding: 10px;
+  margin: 0;
+  font-size: 4em;
+  font-weight: normal;
+  line-height: 1em;
+}
+
+.Header-bannerDesc {
+  padding: 0;
+  margin: 0;
+  font-size: 1.25em;
+  color: rgba(255, 255, 255, .5);
+}
+
+.Navigation {
+  float: right;
+}
+
+.Navigation-link,
+.Navigation-user {
+  display: inline-block;
+  padding: 3px 8px;
+  font-size: 1.125em; // ~18px
+  text-decoration: none;
+}
+
+.Navigation-link,
+.Navigation-link:active,
+.Navigation-link:visited {
+  color: $primary-black;
+  cursor: pointer;
+}
+
+.Navigation-link:hover {
+  color: $primary-black-light;
+}
+
+.Navigation-link--highlight {
+  margin-right: 8px;
+  margin-left: 8px;
+  color: $primary-white;
+  background: transparentize($primary-black, 0.15);
+  border-radius: 3px;
+}
+
+.Navigation-link--highlight:hover {
+  background: transparentize($primary-black, 0.3);
+}
+
+.Navigation-spacer {
+  color: transparentize($primary-white, 0.3);
+}

@@ -1,17 +1,10 @@
 import 'babel/polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import FastClick from 'fastclick';
-import Dispatcher from './core/Dispatcher';
-import getRoutes from './routes'
-import Location from './core/Location';
-import ActionTypes from './common/constants/ActionTypes';
-import { addEventListener, removeEventListener } from './common/utils/DOMUtils';
-import App from './main/components/App'
-import ContactPage from './main/components/ContactPage';
-import Router from 'react-router';
-import createBrowserHistory from 'history/lib/createBrowserHistory'
-import LoginActions from './auth/actions/LoginActions';
+import { Provider } from 'react-redux';
+import { ReduxRouter } from 'redux-router';
+import configureStore from './common/store/configureStore';
+import { addEventListener } from './utils/DOMUtils';
 
 // Create application containers for React app and CSS
 let appContainer = document.getElementById('app');
@@ -40,68 +33,28 @@ let context = {
  * Render React App on Client
  */
 function render() {
-  // set routes with history
-  const history = createBrowserHistory();
-  let routes = getRoutes(history);
-
+  const store = configureStore();
   // Render routes
-  ReactDOM.render(routes, appContainer);
-}
+  ReactDOM.render(
+    <Provider store={store}>
+      <ReduxRouter />
+    </Provider>,
+    appContainer
+  );
 
-/**
- * Authenticate user with localStorage jwt (JSON Web Token)
- */
-function authenticateUser() {
-  let jwt = localStorage.getItem('jwt');
-  if (jwt) {
-    LoginActions.loginUser(jwt);
+  if (process.env.NODE_ENV !== 'production') {
+    // Use require because imports can't be conditional.
+    // In production, you should ensure process.env.NODE_ENV
+    // is envified so that Uglify can eliminate this
+    // module and its dependencies as dead code.
+    require('./utils/createDevToolsWindow')(store);
   }
-}
-
-/**
- * Run React Application
- */
-function run() {
-  let currentLocation = null;
-  let currentState = null;
-
-  // Make taps on links and buttons work fast on mobiles
-  FastClick.attach(document.body);
-
-  // Re-render the app when window.location changes
-  const unlisten = Location.listen( location => {
-    currentLocation = location;
-    currentState = Object.assign({}, location.state, {
-      path: location.pathname,
-      query: location.query,
-      state: location.state,
-      context
-    });
-    render();
-  });
-
-  // Save the page scroll position into the current location's state
-  var supportPageOffset = window.pageXOffset !== undefined;
-  var isCSS1Compat = ((document.compatMode || '') === 'CSS1Compat');
-  const setPageOffset = () => {
-    currentLocation.state = currentLocation.state || Object.create(null);
-    currentLocation.state.scrollX = supportPageOffset ? window.pageXOffset : isCSS1Compat ?
-      document.documentElement.scrollLeft : document.body.scrollLeft;
-    currentLocation.state.scrollY = supportPageOffset ? window.pageYOffset : isCSS1Compat ?
-      document.documentElement.scrollTop : document.body.scrollTop;
-  };
-
-  addEventListener(window, 'scroll', setPageOffset);
-  addEventListener(window, 'pagehide', () => {
-    removeEventListener(window, 'scroll', setPageOffset);
-    unlisten();
-  });
 }
 
 // Run the application when both DOM is ready
 // and page content is loaded
 if (window.addEventListener) {
-  window.addEventListener('DOMContentLoaded', run);
+  window.addEventListener('DOMContentLoaded', render);
 } else {
-  window.attachEvent('onload', run);
+  window.attachEvent('onload', render);
 }

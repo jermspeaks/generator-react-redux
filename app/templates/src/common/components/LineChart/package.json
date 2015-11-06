@@ -1,0 +1,6 @@
+{
+  "name": "LineChart",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./LineChart.js"
+}

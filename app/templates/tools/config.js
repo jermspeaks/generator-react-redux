@@ -5,9 +5,9 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import pkg from '../package.json';
 import util from 'util';
 
-const DEBUG = !process.argv.includes('release');
+const DEBUG = !process.argv.includes('--release');
 const WATCH = global.WATCH === undefined ? false : global.WATCH;
-const VERBOSE = process.argv.includes('verbose');
+const VERBOSE = process.argv.includes('--verbose');
 const STYLE_LOADER = 'style-loader/useable';
 const CSS_LOADER = DEBUG ? 'css-loader' : 'css-loader?minimize';
 const AUTOPREFIXER_BROWSERS = [
@@ -27,7 +27,6 @@ const GLOBALS = {
 const JS_LOADER = {
   test: /\.jsx?$/,
   include: [
-    path.resolve(__dirname, '../node_modules/react-routing/src'),
     path.resolve(__dirname, '../src'),
   ],
   loader: 'babel-loader',
