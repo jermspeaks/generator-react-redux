@@ -1,6 +1,6 @@
 {
-  "name": "generator-react-redux",
-  "version": "1.0.0",
+  "name": "generator-react-redux-modules",
+  "version": "1.0.1",
   "description": "React with Redux code generator using Yeoman",
   "main": "index.js",
   "scripts": {
