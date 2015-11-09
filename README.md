@@ -83,24 +83,11 @@ Replace <moduleName> with your own module name.
 
 #### Examples
 
-Without services, the following command will generate the following:
+The following command will generate the following:
 
 ```bash
 yo react-redux-modules:module auth
-# Generates the following:
-src/auth
-├── actions
-│   └── AuthActions.js
-├── components
-├── constants
-│   └── AuthConstantsConstants.js
-├── containers
-│   └── AuthPage
-│       ├── AuthPage.js
-│       ├── AuthPage.scss
-│       └── package.json
-└── reducers
-    └── auth.js
+# Generates the auth folder with all necessary files
 ```
 
 <!-- ### Common
