@@ -43,7 +43,7 @@ module.exports = generators.Base.extend({
     this.fs.copyTpl(sourceRoot + '/ModulePage.js', moduleFolders.containers + '/' + templateContext.modulePage + '.js', templateContext);
     this.fs.copyTpl(sourceRoot + '/ModulePage.scss', moduleFolders.containers + '/' + templateContext.modulePage + '.scss', templateContext);
     this.fs.copyTpl(sourceRoot + '/_package.json', moduleFolders.containers + '/package.json', templateContext);
-    this.fs.copy(sourceRoot + '/ModuleConstants.js', moduleFolders.constants + '/' + templateContext.moduleConstants + 'Constants.js');
+    this.fs.copy(sourceRoot + '/ModuleConstants.js', moduleFolders.constants + '/' + templateContext.moduleConstants + '.js');
     this.fs.copyTpl(sourceRoot + '/ModuleReducer.js', moduleFolders.reducers + '/' + templateContext.moduleCommonName + '.js', templateContext);
 
     // if (!!this.tests) {
