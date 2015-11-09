@@ -51,7 +51,7 @@ This will compile base files, including the Source, and Tools folders. (tests pe
 | `--skip-cache`     | Do not remember prompt answers             | Default: false |
 | `--skip-install`   | Do not automatically install dependencies  | Default: false |
 
-<!-- ## Sub-generators
+## Sub-generators
 
 The sub generators assumes you already have a project up and running. They are to
 help you through developing new modules, components, etc.
@@ -60,30 +60,18 @@ help you through developing new modules, components, etc.
 
 When you need to start creating new modules, simple use the sub-generator `module`.
 
-Within the module sub-generator, the following default files are generated for you.
-Replace #{Module} with your own module name.
-
 ```bash
-./module
-├── actions
-│   └── ModuleActions.js
-├── components
-│   └── ModulePage
-│       ├── ModulePage.js
-│       ├── ModulePage.scss
-│       └── package.json
-├── constants
-│   └── ModuleConstants.js
-└── stores
-    └── ModuleStore.js
+yo react-redux-modules:module [options] <moduleName>
 ```
+
+Within the module sub-generator, the following default files are generated for you.
+Replace <moduleName> with your own module name.
 
 #### Options
 
 | Option | Description | Default |
 | ------ | ----------- | ------- |
 | `-h`, `--help`     | Print the generator's options and usage    |                |
-| `-s`, `--services` | Include services in the module             |                |
 | `--skip-cache`     | Do not remember prompt answers             | Default: false |
 | `--skip-install`   | Do not automatically install dependencies  | Default: false |
 
@@ -98,21 +86,24 @@ Replace #{Module} with your own module name.
 Without services, the following command will generate the following:
 
 ```bash
-yo react-vertical:module auth
+yo react-redux-modules:module auth
 # Generates the following:
-.
-└── Auth
-    ├── actions
-    │   └── AuthActions.js
-    ├── components
-    │   └── AuthPage
-    ├── constants
-    │   └── AuthConstants.js
-    └── stores
-        └── AuthStores.js
+src/auth
+├── actions
+│   └── AuthActions.js
+├── components
+├── constants
+│   └── AuthConstantsConstants.js
+├── containers
+│   └── AuthPage
+│       ├── AuthPage.js
+│       ├── AuthPage.scss
+│       └── package.json
+└── reducers
+    └── auth.js
 ```
 
-### Common
+<!-- ### Common
 
 If you want to create a common component other modules depend on, this sub-generator
 will create the files needed for you.
