@@ -2,7 +2,7 @@ import React, { PropTypes, Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import styles from './<%= modulePage %>.scss';
-import * as <%= moduleCommonName %> from '../../actions/<%= moduleActions %>';
+import * as <%= moduleActions %> from '../../actions/<%= moduleActions %>';
 
 class <%= modulePage %> extends Component {
   static propTypes = {
