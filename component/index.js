@@ -40,7 +40,9 @@ module.exports = generators.Base.extend({
       desc: 'Root of the component',
     });
 
-    this.option('raw');
+    this.option('raw', {
+      desc: 'Use user input raw format for component name'
+    });
 
     this.log('Creating module ' + this.componentName + '.');
   },

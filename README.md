@@ -90,12 +90,12 @@ yo react-redux-modules:module auth
 # Generates the auth folder with all necessary files
 ```
 
-<!-- ### Common
+### Component
 
-If you want to create a common component other modules depend on, this sub-generator
+If you want to create a component other modules depend on, this sub-generator
 will create the files needed for you.
 
-Within the common sub-generator, the following default files are generated for you.
+Within the component sub-generator, the following default files are generated for you.
 Replace #{CommonComponentName} with your own module name.
 
 ```bash
@@ -111,16 +111,26 @@ Replace #{CommonComponentName} with your own module name.
 
 #### Arguments
 
-| Arguments   | Description | Type | Required |
-| ----------- | ----------- | ---- | -------- |
-| commonName  | Name of the module | String | true |
+| Arguments      | Description        | Type   | Required |
+| -------------- | ------------------ | ------ | -------- |
+| componentName  | Name of the module | String | true     |
+| componentRoot  | Name of the module | String | true     |
+
+#### Options
+
+| Option | Description | Default |
+| ------ | ----------- | ------- |
+| `-h`, `--help`     | Print the generator's options and usage    |                |
+| `--skip-cache`     | Do not remember prompt answers             | Default: false |
+| `--skip-install`   | Do not automatically install dependencies  | Default: false |
+| `--raw`   | Use user input raw format for component name  | Default: false |
 
 #### Examples
 
 The following command will generate the following:
 
 ```bash
-yo react-vertical:common TextBox
+yo react-redux-modules:component TextBox ./src/common/components --raw
 # Generates the following:
 .
 └── src
@@ -130,7 +140,7 @@ yo react-vertical:common TextBox
                  ├── TextBox.js
                  ├── TextBox.scss
                  └── package.json
-``` -->
+```
 
 ## Contributing
 
