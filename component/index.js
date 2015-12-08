@@ -10,17 +10,19 @@ module.exports = generators.Base.extend({
   _createProjectFileSystem: function() {
     var sourceRoot = this.sourceRoot();
     var componentRoot = this.componentRoot;
-    var componentName = S(this.componentName).capitalize().s;
+    var componentRawName = this.componentName;
+    var componentName = S(componentRawName).capitalize().s;
     var templateContext = {
-      componentName: componentName
+      componentName: componentName,
+      componentRawName: componentRawName
     };
-    var componentDir = componentRoot + '/' + componentName;
-    mkdirp(componentRoot + '/' + componentName);
+    var componentDir = componentRoot + '/' + componentRawName;
+    mkdirp(componentRoot + '/' + componentRawName);
 
 
     this.fs.copyTpl(sourceRoot + '/_package.json', componentDir + '/package.json', templateContext);
-    this.fs.copyTpl(sourceRoot + '/ComponentPage.js', componentDir + '/' + componentName + '.js', templateContext);
-    this.fs.copyTpl(sourceRoot + '/ComponentPage.scss', componentDir + '/' + componentName + '.scss', templateContext);
+    this.fs.copyTpl(sourceRoot + '/ComponentPage.js', componentDir + '/' + componentRawName + '.js', templateContext);
+    this.fs.copyTpl(sourceRoot + '/ComponentPage.scss', componentDir + '/' + componentRawName + '.scss', templateContext);
   },
 
   constructor: function() {

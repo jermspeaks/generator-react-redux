@@ -1,10 +1,34 @@
 import React, { PropTypes, Component } from 'react';
-import styles from './<%= componentName %>.scss';
+import styles from './<%= componentRawName %>.scss';
 
-export default class <%= componentName %> extends Component {
-  static propTypes = {};
+export default class <%= componentRawName %> extends Component {
+  static propTypes = {
+    // exampleProp: PropTypes.string.isRequired
+  };
+
+  static defaultProps = {
+    // defaultProp: ''
+  };
+
+  constructor() {
+    super();
+  }
+
+  componentWillMount() {}
+
+  componentDidMount() {}
+
+  componentWillReceiveProps(nextProps) {}
+
+  shouldComponentUpdate(nextProps, nextState) {}
+
+  componentWillUpdate(nextProps, nextState) {}
+
+  componentWillUnmount() {}
 
   render() {
-    return ();
+    return (
+      <div className='<%= componentRawName %>'></div>
+    );
   }
 }
