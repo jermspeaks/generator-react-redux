@@ -10,8 +10,8 @@ module.exports = generators.Base.extend({
   _createProjectFileSystem: function() {
     var sourceRoot = this.sourceRoot();
     var componentRoot = this.componentRoot;
-    var componentRawName = this.componentName;
-    var componentName = S(componentRawName).capitalize().s;
+    var componentName = S(this.componentName).capitalize().s;
+    var componentRawName = this.options.raw ? this.componentName : componentName;
     var templateContext = {
       componentName: componentName,
       componentRawName: componentRawName
@@ -39,6 +39,8 @@ module.exports = generators.Base.extend({
       type: String,
       desc: 'Root of the component',
     });
+
+    this.option('raw');
 
     this.log('Creating module ' + this.componentName + '.');
   },
