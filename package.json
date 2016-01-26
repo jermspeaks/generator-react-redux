@@ -4,7 +4,7 @@
   "description": "React with Redux code generator using Yeoman",
   "main": "app/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -16,7 +16,7 @@
     "yeoman",
     "code",
     "generator",
-		"yeoman-generator"
+    "yeoman-generator"
   ],
   "author": "Jeremy Wong (jermspeaks@gmail.com)",
   "license": "MIT",
@@ -37,6 +37,9 @@
     "gulp-bump": "^1.0.0",
     "gulp-filter": "^3.0.1",
     "gulp-git": "^1.6.0",
-    "gulp-tag-version": "^1.3.0"
+    "gulp-tag-version": "^1.3.0",
+    "mocha": "^2.3.4",
+    "yeoman-assert": "^2.1.1",
+    "yeoman-test": "^1.0.0"
   }
 }
