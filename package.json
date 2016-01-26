@@ -15,7 +15,8 @@
     "redux",
     "yeoman",
     "code",
-    "generator"
+    "generator",
+		"yeoman-generator"
   ],
   "author": "Jeremy Wong (jermspeaks@gmail.com)",
   "license": "MIT",
