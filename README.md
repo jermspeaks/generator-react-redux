@@ -142,6 +142,46 @@ yo react-redux-modules:component TextBox ./src/common/components --raw
                  └── package.json
 ```
 
+### Action Test
+
+If you want to generate an action test, for a known module, this sub-generator will help.
+
+Within the component sub-generator, the following default files are generated for you.
+
+Replace #{module} and #{action} with your own module and action names.
+
+```bash
+.
+└── test
+    └── unit
+        └── module
+             └── actions
+                 └── action.spec.js
+```
+
+#### Arguments
+
+| Arguments      | Description        | Type   | Required |
+| -------------- | ------------------ | ------ | -------- |
+| module  | Name of the module | String | true     |
+| action  | Name of the action | String | true     |
+
+#### Examples
+
+The following command will generate the following:
+
+```bash
+yo react-redux-modules:actionTests Analytics Partners
+
+# Generates the following:
+.
+└── test
+    └── unit
+        └── Analytics
+            └── actions
+                └── Partners.spec.js
+```
+
 ## Contributing
 
 Anyone and everyone is welcome to [contribute](CONTRIBUTING.md),
