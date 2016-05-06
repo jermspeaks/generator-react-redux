@@ -10,32 +10,30 @@ module.exports = generators.Base.extend({
   _createProjectFileSystem: function() {
     var destRoot = this.destinationRoot();
     var sourceRoot = this.sourceRoot();
-    var moduleDir = destRoot + '/test/unit/' + this.options.module;
+    var moduleDir = destRoot + '/test/unit/' + this.module;
     var templateContext = {
-      module: this.options.module,
+      module: this.module,
       action: this.action
     };
 
     mkdirp(moduleDir + '/actions');
 
-    this.fs.copyTpl(sourceRoot + '/spec.js', moduleDir + '/actions/' + templateContext.action + '.js', templateContext);
+    this.fs.copyTpl(sourceRoot + '/spec.js', moduleDir + '/actions/' + templateContext.action + '.spec.js', templateContext);
   },
 
   constructor: function() {
     generators.Base.apply(this, arguments);
 
+    this.argument('module',  {
+      desc: 'Include tests for the component',
+      required: true,
+      type: String,
+    });
+
     this.argument('action', {
       required: true,
       type: String,
       desc: 'Name of the action file',
-    });
-
-    this.option('module',  {
-      desc: 'Include tests for the component',
-      required: true,
-      type: String,
-      alias: 'm',
-      defaults: false,
     });
 
     // option string caught as string and not boolean.
