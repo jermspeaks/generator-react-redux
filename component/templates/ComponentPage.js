@@ -1,5 +1,5 @@
 import React, { PropTypes, Component } from 'react';
-import styles from './<%= componentRawName %>.scss';
+import './<%= componentRawName %>.scss';
 
 export default class <%= componentRawName %> extends Component {
   static propTypes = {

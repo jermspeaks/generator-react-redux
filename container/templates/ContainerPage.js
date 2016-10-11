@@ -1,5 +1,5 @@
 import React, { PropTypes, Component } from 'react';
-import styles from './<%= containerRawName %>.scss';
+import './<%= containerRawName %>.scss';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 // import * as ExampleActions from '../../actions/ExampleActions';
