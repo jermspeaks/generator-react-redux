@@ -28,7 +28,7 @@
     "chalk": "^1.1.1",
     "gulp-git": "^1.6.0",
     "mkdirp": "^0.5.1",
-    "string": "^3.3.1",
+    "string": "^3.3.3",
     "yeoman-generator": "^0.24.1",
     "yosay": "^1.0.5"
   },
