@@ -30,7 +30,7 @@
     "mkdirp": "^0.5.1",
     "string": "^3.3.1",
     "yeoman-generator": "^1.0.0",
-    "yosay": "^1.0.5"
+    "yosay": "^2.0.2"
   },
   "devDependencies": {
     "gulp": "^3.9.0",
