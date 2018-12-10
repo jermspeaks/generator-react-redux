@@ -33,7 +33,7 @@
     "yosay": "^1.0.5"
   },
   "devDependencies": {
-    "gulp": "^3.9.0",
+    "gulp": "^4.0.0",
     "gulp-bump": "^2.5.0",
     "gulp-filter": "^5.0.0",
     "gulp-git": "^2.4.0",
