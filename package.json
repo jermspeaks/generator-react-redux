@@ -26,7 +26,7 @@
   "homepage": "https://github.com/jermspeaks/generator-react-redux#readme",
   "dependencies": {
     "chalk": "^2.0.0",
-    "gulp-git": "^1.6.0",
+    "gulp-git": "^2.10.1",
     "mkdirp": "^0.5.1",
     "string": "^3.3.1",
     "yeoman-generator": "^1.0.0",
